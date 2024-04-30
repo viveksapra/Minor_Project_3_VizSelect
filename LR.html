@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        height:auto ;
+        background-image:linear-gradient(45deg,grey,white);
+    }
+    button{
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+</style>
+<body>
+    <h1>Prediction Results</h1>
+    <h2>Coefficients:</h2>
+    <ul>
+        {% for coef in coefficients %}
+            <li>{{ coef }}</li>
+        {% endfor %}
+    </ul>
+    <h1>MSE graph</h1>
+    <img src="data:image/png;base64,{{ mse }}" alt="Plot">
+    <h2>Coefficient of Determination (R^2):</h2>
+    <p>{{ r2 }}</p>
+    <form action = "/">
+        <button type ="submit">Check Another</button>
+    </form>
+    <form action = "/compare">
+        <button type ="submit">Compare models accuracy</button>
+    </form>
+</body>
+</html>
