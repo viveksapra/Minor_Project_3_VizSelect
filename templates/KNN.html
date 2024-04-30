@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <h2>Coefficients:</h2>
+    <ul>
+        {% for coef in coefficients %}
+            <li>{{ coef }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Mean Squared Error:</h2>
+    <p>{{ mse }}</p>
+    <h2>Coefficient of Determination (R^2):</h2>
+    <p>{{ r2 }}</p>
+    <form action = "/">
+        <button type ="submit">Check Another</button>
+    </form>
+</body>
+</html>

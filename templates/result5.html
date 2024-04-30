@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Predictions</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        height:auto ;
+        background-image:linear-gradient(45deg,grey,white);
+    }
+    button{
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    table{
+        width:50%;
+        height:auto;
+    }
+</style>
+<body>
+    <h1>Confusion Matrix</h1>
+    <img src="data:image/png;base64,{{ confusion_matrix }}" alt="Plot">
+    <form action = "/">
+        <button type ="submit">Check Another</button>
+    </form>
+</body>
+</html>
